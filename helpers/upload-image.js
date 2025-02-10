@@ -1,31 +1,16 @@
-import multer from "multer"
-import path from "path"
+import multer from "multer";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import cloudinary from "./cloudnary.js"; // Importação da configuração
 
-const imageStorage = multer.diskStorage({
-    destination: function (req, file, cb){
-        let folder
-        if(req.baseUrl.includes("user")){
-            folder = "users"
-        }else if(req.baseUrl.includes("pets")){
-            folder = "pets"
-        }
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: "uploads", // Pasta onde os arquivos serão armazenados no Cloudinary
+    format: async (req, file) => "png", // Define o formato do arquivo (pode ser jpg, png, etc.)
+    public_id: (req, file) => file.originalname.split(".")[0], // Usa o nome original do arquivo sem a extensão
+  },
+});
 
-        cb(null, `public/images/${folder}`)
-    },
-    filename: function (req, file, cb){
-        cb(null, Date.now() + Math.floor(Math.random() * 1000) +path.extname(file.originalname))
-    }
-})
+const upload = multer({ storage });
 
-const imageUpload = multer({
-    storage: imageStorage,
-    fileFilter(req, file, cb){
-        if(!file.originalname.match(/\.(png|jpg)$/)){
-            return cb(new Error("Please, is need jpg or png!"))
-        }
-        cb(undefined, true)
-    }
-})
-
-export {imageUpload}
-
+export default upload;
