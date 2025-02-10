@@ -72,6 +72,7 @@ class PetController {
     static async getAllPetUser(req, res){
         const userToken = await getUserToken(req)
         const idToken = userToken._id
+        console.log()
         
         const petsUser = await Pet.find({"user._id": idToken.toString()}).sort("-createdAt")
 
