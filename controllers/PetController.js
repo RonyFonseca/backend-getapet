@@ -51,7 +51,7 @@ class PetController {
         })
 
         images.map((image) => {
-            pet.images.push(image.filename)
+            pet.images.push(image.path)
         })
 
         try{

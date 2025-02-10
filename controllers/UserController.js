@@ -127,7 +127,7 @@ class UserController{
         //VALIDATIONS
 
         if(req.file){
-            user.image = req.file.filename
+            user.image = req.file.path
         }
         if(!user){
             res.status(422).json({message:"User not exist !"})
