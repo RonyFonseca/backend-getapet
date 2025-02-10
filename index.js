@@ -7,7 +7,7 @@ const app = express()
 
 // SOLVE CORS
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:3001', 'https://frontend-getapet-mort.vercel.app'],
+    origin: ['http://localhost:3000', 'http://localhost:3001', 'https://backend-getapet-1.onrender.com'],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }))
