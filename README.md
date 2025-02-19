@@ -1,86 +1,34 @@
-🐾 Sistema de Adoção de Pets
+# Projeto de Adoção de Pets
 
-Este é um projeto full-stack desenvolvido para facilitar a adoção de animais. O sistema permite que usuários cadastrem e adotem pets, gerenciando informações por meio de uma API conectada a um banco de dados MongoDB.
+Este é um site full-stack para adoção de pets, desenvolvido utilizando **Node.js**, **Express**, **MongoDB** e a **ODM Mongoose**. O objetivo é proporcionar uma plataforma onde os usuários possam cadastrar, visualizar e adotar animais de estimação.
 
-🚀 Tecnologias Utilizadas
+## Funcionalidades
 
-Backend:
+- Cadastro de pets para adoção.
+- Visualização de pets cadastrados.
+- Cadastro de usuários e autenticação.
+- Funcionalidade de busca por tipo de pet, nome e localização.
+- Sistema de adição e edição de informações sobre os pets.
 
-Node.js
+## Tecnologias Utilizadas
 
-Express.js
+- **Node.js**: Plataforma de execução JavaScript no servidor.
+- **Express**: Framework web para Node.js.
+- **MongoDB**: Banco de dados NoSQL.
+- **Mongoose**: ODM (Object Data Modeling) para MongoDB.
+- **HTML, CSS, JavaScript (Frontend)**: Para a interface de usuário.
+- **Cloudinary** (se utilizado para upload de imagens de pets): Serviço de armazenamento em nuvem para imagens.
 
-MongoDB
+## Instalação
 
-Mongoose (ODM para MongoDB)
+### Pré-requisitos
 
-Multer (para upload de imagens)
+Certifique-se de ter o Node.js e o MongoDB instalados no seu sistema. Caso ainda não tenha o Node.js instalado, você pode fazer o download [aqui](https://nodejs.org/).
 
-Cloudinary (armazenamento de imagens)
+### Passos para executar o projeto
 
-JSON Web Token (JWT) para autenticação
+1. Clone o repositório:
 
-Frontend:
-
-React.js
-
-Axios (para comunicação com a API)
-
-React Router (para navegação entre páginas)
-
-📌 Funcionalidades
-
-Cadastro e login de usuários
-
-Autenticação por JWT
-
-Cadastro, edição e remoção de pets
-
-Upload e gerenciamento de fotos de pets
-
-Adoção de pets
-
-Listagem de pets cadastrados
-
-🛠️ Como Executar o Projeto
-
-📦 Backend
-
-Clone o repositório:
-
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio/backend
-
-Instale as dependências:
-
-npm install
-
-Configure as variáveis de ambiente (arquivo .env):
-
-MONGO_URI=sua-string-de-conexao
-JWT_SECRET=sua-chave-secreta
-CLOUDINARY_CLOUD_NAME=seu-cloud-name
-CLOUDINARY_API_KEY=sua-api-key
-CLOUDINARY_API_SECRET=sua-api-secret
-
-Inicie o servidor:
-
-npm start
-
-🎨 Frontend
-
-Acesse a pasta do frontend:
-
-cd ../frontend
-
-Instale as dependências:
-
-npm install
-
-Inicie o projeto:
-
-npm start
-
-📄 Licença
-
-Este projeto está sob a licença MIT.
+   ```bash
+   git clone https://github.com/seu-usuario/adocao-pets.git
+   cd adocao-pets
